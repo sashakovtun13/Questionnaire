@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+       <div class="up-down">Start</div>
+       <div class="puls">Start</div>
+       <div class="gradient">Start</div>
+
+    
+    <style>
+
+        /* Ненужно */
+        div{
+            width: 338px;
+            height: 64px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: green;
+            margin-bottom: 50px;
+            border-radius: 15px;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        /*  */
+
+
+/* элементы */
+.up-down{
+            position: relative;
+            animation: an_up-down 1.4s infinite linear;
+}
+.puls{
+
+	
+	  transform: scale(.85);
+  animation: an_pulse 2s ease-in-out infinite;
+}
+.gradient{
+	background: linear-gradient(-45deg,#5683DC, #AF31F6, #AF31F6 ,  #5683DC);
+	background-size: 400% 400%;
+	
+	  
+  animation: an_gradient 2s ease-in-out infinite;
+}
+/*  */
+/* Анимации */
+
+
+@keyframes an_up-down {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes an_pulse {
+  from {
+  background-position: 0% 50%;
+    transform: scale(.85);
+  }
+  50% {
+  background-position: 100% 50%;
+    transform: scale(1);
+  }
+  to {
+  background-position: 0% 50%;
+    transform: scale(.85);
+  }
+}
+@keyframes an_gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+    </style>
+</body>
+</html>
